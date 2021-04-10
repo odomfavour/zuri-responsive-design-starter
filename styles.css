@@ -346,10 +346,32 @@ div.footer h6 {
     padding-top: 6rem;
 }
 
+@media (min-width: 600px) {
+    .nav-header .icon {
+        display: none;
+    }
+}
+
+
 @media(max-width: 425px) {
-    div.nav-bar {
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 1rem;
+        
+    }
+
+    .nav-header .icon {
+        font-size: 23px;
+        color: #bcc3c7;
+        cursor: pointer;
+    }
+
+    div.nav-bar {
+        padding: 0;
         flex-direction: column;
+        transition: all 0.4s ease;
     }
 
     .logo {
@@ -357,7 +379,33 @@ div.footer h6 {
     }
 
     ul.nav-links {
-        margin: 15px auto;
+        flex-direction: column;
+        
+        /* padding: 10px; */
+        /* margin: 15px auto; */
+        /* display: none; */
+    }
+
+    .links-container {
+        transition: 3ms all ease-in-out;
+        
+    }
+
+    .link-holder {
+        display: none;
+        transition-delay: 4s;
+        transition: all ease-in-out;
+        
+        
+    }
+
+    .show-links {
+        display: block;
+    }
+
+    ul.nav-links a {
+        display: block;
+        padding: 10px;
     }
 
     div.hero-section {
@@ -373,17 +421,16 @@ div.footer h6 {
     }
 
     div.background {
-        /* two values means (top and bottom) and (left and right) */
-        /* four values top right bottom left  */
-        /* single value all  */
         padding: 15px 20px;
         height: auto;
     }
 
     div.hero-background-pos {
-        width: 100px;
+        /* width: 100px;
         height: 100px;
-        left: 70%;
+        left: 70%; */
+        display: none;
+
     }
 
     div.snapshot-box-content {
